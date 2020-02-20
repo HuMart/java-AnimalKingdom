@@ -85,5 +85,8 @@ public class Main
 		System.out.println("*** Animals with Lungs ***");
 		printAnimals(animals, a -> a.breath() == "breath with lungs");
 		System.out.println();
+		System.out.println("*** Animals with lungs and named  in 1758 ***");
+		printAnimals(animals, a -> (a.breath() == "breath with lungs" && a.getYear() == 1758));
+		System.out.println();
 	}
 }
