@@ -1,6 +1,6 @@
 package kingdom;
 
-public class Mammals extends Animal
+public class Fish extends Animal
 {
 	// constructor
 	public Fish(String name, int yearDiscovered)
