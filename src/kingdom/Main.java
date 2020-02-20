@@ -88,5 +88,18 @@ public class Main
 		System.out.println("*** Animals with lungs and named  in 1758 ***");
 		printAnimals(animals, a -> (a.breath() == "breath with lungs" && a.getYear() == 1758));
 		System.out.println();
+		System.out.println("*** Animals wit lungs and eggs ***");
+		printAnimals(animals, a -> (a.breath() == "breath with lungs" && a.reproduce() == "gives birth eggs"));
+		System.out.println();
+		System.out.println("*** Animals named in 1758 Alphabetically ***");
+		animals.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+		printAnimals(animals, a -> a.getYear() == 1758);
+		System.out.println();
+		System.out.println("*** Mammals Alphabetically ***");
+		filterAnimals(animals, a -> a instanceof Mammals);
+		filteredAniimals.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+		filteredAniimals.forEach(a -> System.out.println(a.toString()));
+		System.out.println("*** FiniSh ***");
+
 	}
 }
